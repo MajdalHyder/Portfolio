@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="/public/timelinestyles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/public/cardscss.css">
+    <link rel="stylesheet" href="/public/crowdin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <title>Majd AL HYDER</title>
+</head>
+
+<body style="margin: 0; padding: 0; box-sizing: border-box; background-color:#283747;">
+    <header class="container-fluid" style="z-index: 4000;">
+        <nav class="navbar navbar-expand-lg px-5 justify-content-between">
+            <div class="home"><a class="links" href="#homediv">M</a></div>
+            <ul class="d-flex me-5">
+                <li class="nav-item"> <a class="links" href="#about">About me</a></li>
+                <li class="nav-item mx-3"><a class="links" href="#skills">Skills</a></li>
+                <li class="nav-item mx-3"><a class="links" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="links" data-bs-toggle="modal" data-bs-target="#contact_me_modal">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="row container-fluid" id="homediv" style="background-color: transparent; height:100vh;">
+            <%- include('_cover') %>
+        </div>
+
+        <div id="about" class="col">
+            <%- include('_timeline') %>
+        </div>
+
+        <div id="skills" class="row container-fluid" style=" font-family:monospace; padding-top: 20vh; background-color: transparent; height:100vh;">
+            <%- include('_skills') %>
+        </div>
+
+        <div id="projects" class="row container-fluid" style="padding-top: 20vh; background-color: transparent; height:100vh;">
+            <%- include('_projects') %>
+        </div>
+
+    </main>
+    <%- include('_contact_me_modal') %>
+    <%- include('./projects/_crowdin') %>
+    <%- include('./projects/_laravel') %>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
